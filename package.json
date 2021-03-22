@@ -13,6 +13,8 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-plugin-vue": "^7.8.0",
     "nodemon": "^2.0.7"
   }
 }
