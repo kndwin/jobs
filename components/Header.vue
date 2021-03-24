@@ -1,7 +1,8 @@
 <template>
-  <div class="container">
-		<h1>Jobs</h1>
+	<div>
+		<h1>Header</h1>
 		<NuxtLink to="/">Home</NuxtLink>
-		<JobsDashboard />
+		<NuxtLink to="/jobs">Jobs</NuxtLink>
 	</div>
 </template>
+

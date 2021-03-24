@@ -1,8 +1,5 @@
 export default {
   mode: 'spa',
-  /*
-   ** Headers of the page
-   */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -16,29 +13,23 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
   css: [],
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: [],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [],
-  /*
-   ** Build configuration
-   */
+  modules: [
+		'@nuxtjs/axios'
+	],
+	axios: {
+		credentials: false,
+	},
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {},
   },
+	buildModules: ['@nuxt/typescript-build'],
+	components: true,
+	methods: {
+		refresh() {
+			this.$fetch()
+		}
+	}
 };
