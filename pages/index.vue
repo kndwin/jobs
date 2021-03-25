@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-		<h1>Hello world</h1>
-		<NuxtLink to="/jobs">Jobs</NuxtLink>
+		<h1>software jobs in sydney</h1>
   </div>
 </template>
