@@ -5,8 +5,17 @@
 				{{ job.title }}
 			</a>
 		</h2>
-		<p class="company">🏢 {{ job.company }}</p>
-		<p class="timePosted">⌚ {{ job.timePosted }}</p>
+		<div class="companyAndTimePostedWrapper">
+			<img class="icon"
+				alt="Icon of building"
+				src="https://img.icons8.com/ios/50/000000/building.png"/>
+			<p class="company">
+				{{ job.company }}
+			</p>
+			<p class="timePosted">
+				{{ job.timePosted }}
+			</p>
+		</div>
 		<p class="source">{{ job.source }}</p>
 	</div>
 </template>
@@ -24,7 +33,6 @@ export default Vue.extend({
   border: 1px solid black;
   border-radius: 5px; 
   margin: 0.5rem;
-  height: 15rem;
 }
 .source {
   padding: 0.5rem;
@@ -37,6 +45,22 @@ export default Vue.extend({
   font-size: 14pt;
   font-weight: bold;
 }
+
+.timePosted {
+	color: #666;
+}
+
+.companyAndTimePostedWrapper {
+	display: flex;
+	align-items: baseline;
+	overflow: hidden; 
+
+	p {
+		margin: 0 1rem 0 0;
+	}
+	
+}
+
 .title {
   a {
     text-decoration: none;
@@ -44,4 +68,16 @@ export default Vue.extend({
     color: black;
   }
 }
+
+.icon {
+	height: 1em;
+	margin: 0 0.2rem 0 0; 
+}
+
+@media (width: 700px) {
+	.companyAndTimePostedWrapper {
+		display: block;
+	}
+}
+
 </style>

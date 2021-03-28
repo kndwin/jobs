@@ -1,10 +1,12 @@
 <template>
 	<div class="header">
 		<NuxtLink to="/" class="link">
-      Home
+			<img class="logo" src="~/assets/Icon.webp" 
+				alt="Logo"
+			>
     </NuxtLink>
 		<NuxtLink to="/jobs" class="link">
-      Jobs
+      jobs
     </NuxtLink>
 	</div>
 </template>
@@ -29,5 +31,9 @@
 
 .link {
   margin: 0 1rem;
+}
+
+.logo {
+	height: 3rem;
 }
 </style>
